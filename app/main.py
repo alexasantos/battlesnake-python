@@ -49,16 +49,11 @@ def move():
     return {
         'move': 'north',
         'taunt': snake.get("id")
-
+    }
     #if snake.get(health) > "70":
     #    do = 'east'
     #else:
     #    do = 'west'
-
-    return {
-        'move': do
-        'taunt': 'battlesnake-python!'
-    }
 
 
 @bottle.post('/end')
