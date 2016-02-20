@@ -35,12 +35,15 @@ def start():
 
 @bottle.post('/move')
 def move():
+    do = 'north'
     data = bottle.request.json
-    # health = 100 - data.get(turn) + data.get(food)
-    # TODO: Do things with data
+    if snake.get(health) > 70:
+        do = 'east'
+    else:
+        do = 'west'
 
     return {
-        'move': 'north',
+        'move': do
         'taunt': 'battlesnake-python!'
     }
 
