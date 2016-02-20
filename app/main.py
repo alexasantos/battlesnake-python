@@ -15,8 +15,8 @@ def index():
     )
 
     return {
-        'color': '#00ffff',
-        'head': head_url
+        'color': '#04B431',
+        'head': "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstorage.canoe.ca%2Fv1%2Fdynamic_resize%2Fsws_path%2Fsuns-prod-images%2F1297411412978_ORIGINAL.jpg%3Fquality%3D80%26size%3D650x&f=1"
     }
 
 
