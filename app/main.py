@@ -2,7 +2,7 @@ import bottle
 import os
 
 snake = [] #init snake
-direction = ""
+direction = "north"
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -64,14 +64,14 @@ def move():
     """
     
     if head[0] == width-2 or head[0] == 1:
-        if direction == "west"
+        if direction == "west":
             nextMove = "north"
-        else 
+        else: 
             nextMove = "south"
     if head[1] == height-2 or head[1] == 1:
-        if direction == "north"
+        if direction == "north":
             nextMove = "east"
-        else
+        else:
             nextMove = "west"
     
     direction = nextMove
