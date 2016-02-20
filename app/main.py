@@ -37,15 +37,28 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    nextMove = ""
     
     allSnakes = data.get("snakes")
     for i in allSnakes:
         if allSnakes[i].get("id") == "f795c973-42a3-400e-aadd-4f7bc540c24b":
             snake = allSnakes[i]
 
-
+    #find edges of board
+    height = data.get("height")
+    width = data.get("width")
+    
+    coords = snake.get("coords") #this is a list
+    head = coords[0] #list of two numbers
+    
+    if head[0] == width-1 or head[0] == 0:
+        nextMove = "north"
+    if head[1] == height-1 or head[1] == 0:
+        nextMove = "east"
+        
+    
     return {
-        'move': 'north',
+        'move': nextMove,
         'taunt': 'bloop' #snake.get("id")
     }
 
