@@ -1,8 +1,8 @@
 import bottle
 import os
 
-
 snake = [] #init snake
+direction = ""
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -51,12 +51,30 @@ def move():
     coords = snake.get("coords") #this is a list
     head = coords[0] #list of two numbers
     
-    if head[0] == width-2 or head[0] == 1:
+    """
+    if direction == "north"
+        nextMove = "north"
+    else 
         nextMove = "south"
-    if head[1] == height-2 or head[1] == 1:
+            
+    if direction == "east"
         nextMove = "east"
+    else
+        nextMove = "west"
+    """
     
+    if head[0] == width-2 or head[0] == 1:
+        if direction == "west"
+            nextMove = "north"
+        else 
+            nextMove = "south"
+    if head[1] == height-2 or head[1] == 1:
+        if direction == "north"
+            nextMove = "east"
+        else
+            nextMove = "west"
     
+    direction = nextMove
     
     return {
         'move': nextMove,
