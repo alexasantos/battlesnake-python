@@ -36,7 +36,6 @@ def start():
 
 @bottle.post('/move')
 def move():
-    do = 'north'
     data = bottle.request.json
     
     allSnakes = data.get("snakes")
@@ -47,12 +46,8 @@ def move():
 
     return {
         'move': 'north',
-        'taunt': snake.get("id")
+        'taunt': 'bloop' #snake.get("id")
     }
-    #if snake.get(health) > "70":
-    #    do = 'east'
-    #else:
-    #    do = 'west'
 
 
 @bottle.post('/end')
