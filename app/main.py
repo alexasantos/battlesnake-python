@@ -11,7 +11,7 @@ def static(path):
 Health = 100
 
 def index():
-    head_url = 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fstorage.canoe.ca%2Fv1%2Fdynamic_resize%2Fsws_path%2Fsuns-prod-images%2F1297411412978_ORIGINAL.jpg%3Fquality%3D80%26size%3D650x&f=1' % (
+    head_url = 'https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiNrYS9rIfLAhUBz2MKHdhZA18QjRwIBw&url=http%3A%2F%2Ftheultralinx.com%2Ftag%2Fgif%2F&psig=AFQjCNE-U5WU-jW1hh5iKxSp_aT6bp4uPQ&ust=1456092250871705' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
