@@ -34,12 +34,16 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    allSnakes = data.get(snakes)
+    
+    for i in allSnakes:
+        if allSnakes[i].get(id) == "f795c973-42a3-400e-aadd-4f7bc540c24b":
+            snake = allSnakes[i]
 
-    # TODO: Do things with data
 
     return {
         'move': 'north',
-        'taunt': 'battlesnake-python!'
+        'taunt': snake.get(id)
     }
 
 
