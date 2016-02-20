@@ -2,6 +2,8 @@ import bottle
 import os
 
 
+snake = [] #init snake
+
 @bottle.route('/static/<path:path>')
 def static(path):
     return bottle.static_file(path, root='static/')
@@ -37,27 +39,25 @@ def start():
 def move():
     do = 'north'
     data = bottle.request.json
-<<<<<<< HEAD
-    allSnakes = data.get(snakes)
     
+    allSnakes = data.get("snakes")
     for i in allSnakes:
-        if allSnakes[i].get(id) == "f795c973-42a3-400e-aadd-4f7bc540c24b":
+        if allSnakes[i].get("id") == "f795c973-42a3-400e-aadd-4f7bc540c24b":
             snake = allSnakes[i]
 
 
     return {
         'move': 'north',
-        'taunt': snake.get(id)
-=======
-    if snake.get(health) > 70:
-        do = 'east'
-    else:
-        do = 'west'
+        'taunt': snake.get("id")
+
+    #if snake.get(health) > "70":
+    #    do = 'east'
+    #else:
+    #    do = 'west'
 
     return {
         'move': do
         'taunt': 'battlesnake-python!'
->>>>>>> 555665aea1418b0d263eaa57b79e2a84a24fece5
     }
 
 
