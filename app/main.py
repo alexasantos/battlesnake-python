@@ -36,7 +36,7 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-
+    # health = 100 - data.get(turn) + data.get(food)
     # TODO: Do things with data
 
     return {
