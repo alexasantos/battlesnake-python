@@ -52,10 +52,11 @@ def move():
     head = coords[0] #list of two numbers
     
     if head[0] == width-2 or head[0] == 1:
-        nextMove = "north"
+        nextMove = "south"
     if head[1] == height-2 or head[1] == 1:
         nextMove = "east"
-        
+    
+    
     
     return {
         'move': nextMove,
