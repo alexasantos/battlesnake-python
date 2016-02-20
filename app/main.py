@@ -63,16 +63,14 @@ def move():
         nextMove = "west"
     """
     
-    if head[0] == width-2 or head[0] == 1:
-        if direction == "west":
-            nextMove = "north"
-        else: 
-            nextMove = "south"
-    if head[1] == height-2 or head[1] == 1:
-        if direction == "north":
-            nextMove = "east"
-        else:
-            nextMove = "west"
+    if head[0] == width-2: 
+        nextMove == "south"
+    if head[0] == 1:
+        nextMove = "north"
+    if head[1] == height-2:
+        nextMove == "west"
+    if head[1] == 1:
+        nextMove = "east"
     
     direction = nextMove
     
