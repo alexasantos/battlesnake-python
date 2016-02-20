@@ -10,7 +10,6 @@ def static(path):
 
 
 @bottle.get('/')
-Health = 100
 
 def index():
     head_url = 'https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiNrYS9rIfLAhUBz2MKHdhZA18QjRwIBw&url=http%3A%2F%2Ftheultralinx.com%2Ftag%2Fgif%2F&psig=AFQjCNE-U5WU-jW1hh5iKxSp_aT6bp4uPQ&ust=1456092250871705' % (
