@@ -40,9 +40,9 @@ def move():
     nextMove = ""
     
     allSnakes = data.get("snakes")
-    for i in allSnakes:
-        if allSnakes[i].get("id") == "f795c973-42a3-400e-aadd-4f7bc540c24b":
-            snake = allSnakes[i]
+    for tempsnake in allSnakes:
+        if tempsnake.get("id") == "f795c973-42a3-400e-aadd-4f7bc540c24b":
+            snake = tempsnake
 
     #find edges of board
     height = data.get("height")
@@ -51,15 +51,15 @@ def move():
     coords = snake.get("coords") #this is a list
     head = coords[0] #list of two numbers
     
-    if head[0] == width-1 or head[0] == 0:
+    if head[0] == width-2 or head[0] == 1:
         nextMove = "north"
-    if head[1] == height-1 or head[1] == 0:
+    if head[1] == height-2 or head[1] == 1:
         nextMove = "east"
         
     
     return {
         'move': nextMove,
-        'taunt': 'bloop' #snake.get("id")
+        'taunt': 'bloop' 
     }
 
 
