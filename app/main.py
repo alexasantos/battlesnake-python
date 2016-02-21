@@ -58,9 +58,9 @@ def move():
                 nextMove = 'south'
             else:
                 nextMove = 'north'
-        if direction == 'north' and head[1] == 0:
+        elif direction == 'north' and head[1] == 0:
             nextMove = 'east'
-        if direction == 'south' and head[1] == height-2:
+        elif direction == 'south' and head[1] == height-2:
             nextMove = 'east'
     elif head[0] == width-2:
         if direction == 'east':
@@ -68,9 +68,9 @@ def move():
                 nextMove = 'north'
             else:
                 nextMove = 'south'
-        if direction == 'north' and head[1] == 1:
+        elif direction == 'north' and head[1] == 1:
             nextMove = 'west'
-        if direction == 'south' and head[1] == height-2:
+        elif direction == 'south' and head[1] == height-2:
             nextMove = 'west'
     elif head[1] == 1:
         if direction == 'north':
@@ -78,9 +78,9 @@ def move():
                 nextMove = 'west'
             else:
                 nextMove = 'east'
-        if direction == 'east' and head[0] == width-2:
+        elif direction == 'east' and head[0] == width-2:
             nextMove = 'south'
-        if direction == 'west' and head[0] ==1:
+        elif direction == 'west' and head[0] ==1:
             nextMove = 'south'
     elif head[1] == height-2:
         if direction == 'south':
@@ -88,9 +88,9 @@ def move():
                 nextMove = 'west'
             else:
                 nextMove = 'east'
-        if direction == 'east' and head[0] == 1:
+        elif direction == 'east' and head[0] == 1:
             nextMove = 'north'
-        if direction == 'west' and head[0] == width-2:
+        elif direction == 'west' and head[0] == width-2:
             nextMove = 'north'
         
     else:
