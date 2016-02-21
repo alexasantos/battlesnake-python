@@ -101,19 +101,19 @@ def move():
     direction = nextMove
     
     
-    taunts = [“”,””,””,””,””,””,””,””,””,””] 
-    taunts[0] = “Sssslither on over, “
-    taunts[1] = “Let’sss get nasssty, “
-    taunts[2] = “Can I have your sssnake id, “
-    taunts[3] = “Meet me when thisss is over, “
-    taunts[4] = “I like it rough, “
-    taunts[5] = “Show me your movesss, “
-    taunts[6] = “I’m loving your ssstyle, “
-    taunts[7] = “Give me a kissss, “
-    taunts[8] = “Looking sssexy, ”
-    taunts[9] = “Pin me againssst a wall, “
+    taunts = ['','','','','','','','','',''] 
+    taunts[0] ='Sssslither on over, '
+    taunts[1] ='Let’sss get nasssty, '
+    taunts[2] ='Can I have your sssnake id, '
+    taunts[3] ='Meet me when thisss is over, '
+    taunts[4] ='I like it rough, '
+    taunts[5] ='Show me your movesss, '
+    taunts[6] ='I’m loving your ssstyle, '
+    taunts[7] ='Give me a kissss, '
+    taunts[8] ='Looking sssexy, '
+    taunts[9] ='Pin me againssst a wall, '
     if (data.get(“turn”) % 5 ==0):
-        currTaunt = random.choice(taunts) + random.choice(allSnakes).get(“name”)
+        currTaunt = random.choice(taunts) + random.choice(allSnakes).get('name')
 
     return {
         'move': nextMove,
