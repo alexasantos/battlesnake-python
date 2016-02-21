@@ -87,8 +87,6 @@ def move():
                 nextMove = 'west'
             else:
                 nextMove = 'east'
-            if head[0] == 1:
-                nextMove = 'east'
         if direction == 'east' and head[0] == 1:
             nextMove = 'north'
         if direction == 'west' and head[0] == width-2:
@@ -96,21 +94,12 @@ def move():
         
     else:
         nextMove = direction
-    """
-    if head[0] == width-2: 
-        nextMove == "south"
-    if head[0] == 1:
-        nextMove = "north"
-    if head[1] == height-2:
-        nextMove == "west"
-    if head[1] == 1:
-        nextMove = "east"
-    """
+    
     direction = nextMove
     
     return {
         'move': nextMove,
-        'taunt': 'bloop' 
+        'taunt': direction
     }
 
 
