@@ -100,7 +100,7 @@ def move():
     
     return {
         'move': nextMove,
-        'taunt': "are you jesus because i want to nail you"
+        'taunt': "are you jesus because i want to snail you"
     }
 
 
