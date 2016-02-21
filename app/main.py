@@ -50,19 +50,29 @@ def move():
     
     coords = snake.get("coords") #this is a list
     head = coords[0] #list of two numbers
-    
-    
-    if head[0] == 1 or head[0] == width-2:
-        if head[1] == height-2:
-            nextMove = 'north'
-        else:
-            nextMove = 'south'
-    if head[1] == 1 or head[1] == height-2:
-        if head[0] == width-2:
-            nextMove = 'west'
-        else:
+
+    if head[0] == 1:
+        if direction == 'west':
+            if head[1] == 1:
+                nextMove = 'south'
+            else:
+                nextMove = 'north'
+        if direction == 'north' and head[1] == 0:
             nextMove = 'east'
-            
+        if direction == 'south' and head[1] == height-2:
+            nextMove = 'east'
+    if head[0] == width-2:
+        if direction == 'east':
+            if head[1] == height-2:
+                nextMove = 'north'
+            else:
+                nextMove = 'south'
+        if direction == 'north' and head[1] == 1:
+            nextMove = 'west'
+        if direction == 'south' and head[1] == height-2:
+            nextMove = 'west'
+    
+    
     """
     if head[0] == width-2: 
         nextMove == "south"
