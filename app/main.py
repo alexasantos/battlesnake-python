@@ -85,6 +85,8 @@ def move():
         if direction == 'south':
             if head[0] == width-2:
                 nextMove = 'west'
+            else:
+                nextMove = 'east'
             if head[0] == 1:
                 nextMove = 'east'
         if direction == 'east' and head[0] == 1:
