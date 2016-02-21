@@ -100,7 +100,7 @@ def move():
         nextMove = direction
     direction = nextMove
     
-    
+    """
     taunts = ['','','','','','','','','',''] 
     taunts[0] ='Sssslither on over, '
     taunts[1] ='Let’sss get nasssty, '
@@ -114,10 +114,10 @@ def move():
     taunts[9] ='Pin me againssst a wall, '
     if (data.get(“turn”) % 5 ==0):
         currTaunt = random.choice(taunts) + random.choice(allSnakes).get('name')
-
+    """
     return {
         'move': nextMove,
-        'taunt': currTaunt
+        'taunt': 'no'
     }
 
 
