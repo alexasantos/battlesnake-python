@@ -36,6 +36,7 @@ def start():
 
 @bottle.post('/move')
 def move():
+    global direction
     data = bottle.request.json
     nextMove = ""
     
@@ -99,7 +100,7 @@ def move():
     
     return {
         'move': nextMove,
-        'taunt': direction
+        'taunt': "are you jesus because i want to nail you"
     }
 
 
