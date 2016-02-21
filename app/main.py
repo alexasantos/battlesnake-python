@@ -1,7 +1,7 @@
 import bottle
 import os
 
-snake = [] #init snake
+global direction
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -43,7 +43,7 @@ def move():
         if tempsnake.get("id") == "f795c973-42a3-400e-aadd-4f7bc540c24b":
             snake = tempsnake
             
-    direction = snake.get('message')[6:]
+    #direction = snake.get('message')[6:]
     
     print(direction)
 
@@ -98,7 +98,7 @@ def move():
         
     else:
         nextMove = direction
-    
+    direction = nextMove
     
     return {
         'move': nextMove,
