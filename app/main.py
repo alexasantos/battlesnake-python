@@ -1,7 +1,7 @@
 import bottle
 import os
 
-global direction = 'east'
+global direction = 'north'
 
 @bottle.route('/static/<path:path>')
 def static(path):
