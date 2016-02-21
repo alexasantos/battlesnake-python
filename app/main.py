@@ -1,7 +1,7 @@
 import bottle
 import os
 
-global direction
+global direction = 'east'
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -55,7 +55,7 @@ def move():
     head = coords[0] #list of two numbers
 
     if head[0] == 1:
-        print("I'm on x cood 1")
+        #print("I'm on x cood 1")
         if direction == 'west':
             if head[1] == 1:
                 nextMove = 'south'
