@@ -36,7 +36,6 @@ def start():
 
 @bottle.post('/move')
 def move():
-    global direction
     data = bottle.request.json
     nextMove = ""
     
@@ -53,6 +52,7 @@ def move():
     head = coords[0] #list of two numbers
 
     if head[0] == 1:
+        print("I'm on x cood 1")
         if direction == 'west':
             if head[1] == 1:
                 nextMove = 'south'
@@ -80,7 +80,7 @@ def move():
                 nextMove = 'east'
         elif direction == 'east' and head[0] == width-2:
             nextMove = 'south'
-        elif direction == 'west' and head[0] ==1:
+        elif direction == 'west' and head[0] == 1:
             nextMove = 'south'
     elif head[1] == height-2:
         if direction == 'south':
